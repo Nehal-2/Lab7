@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_digital_lock_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_digital_lock" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="240089500fs"></ZoomStartTime>
+      <ZoomEndTime time="357368657fs"></ZoomEndTime>
+      <Cursor1Time time="315000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="111"></NameColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="25" />
+   <wvobject type="logic" fp_name="/tb_digital_lock/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/unlock">
+      <obj_property name="ElementShortName">unlock</obj_property>
+      <obj_property name="ObjectShortName">unlock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/open">
+      <obj_property name="ElementShortName">open</obj_property>
+      <obj_property name="ObjectShortName">open</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/close">
+      <obj_property name="ElementShortName">close</obj_property>
+      <obj_property name="ObjectShortName">close</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/fail">
+      <obj_property name="ElementShortName">fail</obj_property>
+      <obj_property name="ObjectShortName">fail</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/in_pass">
+      <obj_property name="ElementShortName">in_pass[3:0]</obj_property>
+      <obj_property name="ObjectShortName">in_pass[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/in_pass">
+      <obj_property name="ElementShortName">in_pass[3:0]</obj_property>
+      <obj_property name="ObjectShortName">in_pass[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/failed_attempts_next">
+      <obj_property name="ElementShortName">failed_attempts_next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">failed_attempts_next[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/open">
+      <obj_property name="ElementShortName">open</obj_property>
+      <obj_property name="ObjectShortName">open</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/close">
+      <obj_property name="ElementShortName">close</obj_property>
+      <obj_property name="ObjectShortName">close</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/unlock">
+      <obj_property name="ElementShortName">unlock</obj_property>
+      <obj_property name="ObjectShortName">unlock</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/fail">
+      <obj_property name="ElementShortName">fail</obj_property>
+      <obj_property name="ObjectShortName">fail</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/current_state">
+      <obj_property name="ElementShortName">current_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/next_state">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/q">
+      <obj_property name="ElementShortName">q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/password">
+      <obj_property name="ElementShortName">password[3:0]</obj_property>
+      <obj_property name="ObjectShortName">password[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/failed_attempts">
+      <obj_property name="ElementShortName">failed_attempts[3:0]</obj_property>
+      <obj_property name="ObjectShortName">failed_attempts[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/open_debounced">
+      <obj_property name="ElementShortName">open_debounced</obj_property>
+      <obj_property name="ObjectShortName">open_debounced</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/open_sync">
+      <obj_property name="ElementShortName">open_sync[1:0]</obj_property>
+      <obj_property name="ObjectShortName">open_sync[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/timer">
+      <obj_property name="ElementShortName">timer[29:0]</obj_property>
+      <obj_property name="ObjectShortName">timer[29:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_digital_lock/dut/timer_done">
+      <obj_property name="ElementShortName">timer_done</obj_property>
+      <obj_property name="ObjectShortName">timer_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_digital_lock/dut/TIMER_MAX">
+      <obj_property name="ElementShortName">TIMER_MAX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TIMER_MAX[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sim_1/new/tb_digital_lock.sv,1733217760,systemVerilog,,,,tb_digital_lock,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/imports/Task3_nbit/register_nbit.sv,1733059341,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sim_1/new/tb_digital_lock.sv,,register_nbit,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/imports/counter_srcs/nbit_counter.sv,1732021403,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/imports/Task3_nbit/register_nbit.sv,,nbit_counter,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/imports/d_FF_srcs/d_flipflop.sv,1733067478,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/new/digital_lock.sv,,d_flipflop,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/new/digital_lock.sv,1733217045,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.srcs/sources_1/imports/counter_srcs/nbit_counter.sv,,digital_lock,,,,,,,,

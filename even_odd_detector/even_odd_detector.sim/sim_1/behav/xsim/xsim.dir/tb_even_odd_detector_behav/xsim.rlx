@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1195391489690228330  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 27e8843f70584245b91ef7cf1607d40b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_even_odd_detector_behav xil_defaultlib.tb_even_odd_detector xil_defaultlib.glbl" , 
+    buildDate : "May 24 2019" , 
+    buildTime : "14:51:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_even_odd_detector_behav/xsimk\"   \"xsim.dir/tb_even_odd_detector_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_even_odd_detector_behav/obj/xsim_1.lnx64.o\" -L\"/home/it/Xilinx/Vivado/Vivado/2019.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

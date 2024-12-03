@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1733057378">
+  <File Type="VDS-TIMING-PB" Name="even_odd_detector_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="even_odd_detector_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="even_odd_detector_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="even_odd_detector_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="even_odd_detector_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="even_odd_detector_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="even_odd_detector_top.vds"/>
+  <File Type="REPORTS-TCL" Name="even_odd_detector_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="even_odd_detector_top.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA programming files/counter_n_bit.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/counter_n_bit.sv"/>
+        <Attr Name="ImportTime" Val="1731075515"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA programming files/decoder.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/decoder.sv"/>
+        <Attr Name="ImportTime" Val="1731076163"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/even_odd_detector.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA programming files/sev_seg_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/sev_seg_controller.sv"/>
+        <Attr Name="ImportTime" Val="1732019699"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA programming files/sev_seg_decoder.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/sev_seg_decoder.sv"/>
+        <Attr Name="ImportTime" Val="1731509039"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/FPGA programming files/sev_seg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/sev_seg.sv"/>
+        <Attr Name="ImportTime" Val="1732019901"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="even_odd_detector_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/FPGA programming files/pin-assignment.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../FPGA programming files/pin-assignment.xdc"/>
+        <Attr Name="ImportTime" Val="1732020421"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

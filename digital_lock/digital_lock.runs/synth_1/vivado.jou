@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  3 12:29:06 2024
+# Process ID: 255938
+# Current directory: /home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.runs/synth_1
+# Command line: vivado -log digital_lock_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source digital_lock_top.tcl
+# Log file: /home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.runs/synth_1/digital_lock_top.vds
+# Journal file: /home/it/DigitalSystemDesign/Lab7/digital_lock/digital_lock.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source digital_lock_top.tcl -notrace

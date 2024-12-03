@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../digital_lock.srcs/sources_1/imports/d_FF_srcs/d_flipflop.sv" \
+"../../../../digital_lock.srcs/sources_1/new/digital_lock.sv" \
+"../../../../digital_lock.srcs/sources_1/imports/counter_srcs/nbit_counter.sv" \
+"../../../../digital_lock.srcs/sources_1/imports/Task3_nbit/register_nbit.sv" \
+"../../../../digital_lock.srcs/sim_1/new/tb_digital_lock.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

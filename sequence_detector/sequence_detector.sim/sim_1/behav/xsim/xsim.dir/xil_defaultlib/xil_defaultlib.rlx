@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sim_1/new/tb_sequence_detector.sv,1733051003,systemVerilog,,,,tb_sequence_detector,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sources_1/imports/DigitalSystemDesign/Lab5/clock_divider/clock_divider.srcs/sources_1/imports/sources_1/imports/counter_srcs/nbit_counter.sv,1732021403,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sources_1/new/sequence_detector.sv,,nbit_counter,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sources_1/imports/d_FF_srcs/d_flipflop.sv,1733050530,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sources_1/imports/DigitalSystemDesign/Lab5/clock_divider/clock_divider.srcs/sources_1/imports/sources_1/imports/counter_srcs/nbit_counter.sv,,d_flipflop,,,,,,,,
+/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sources_1/new/sequence_detector.sv,1733051487,systemVerilog,,/home/it/DigitalSystemDesign/Lab7/sequence_detector/sequence_detector.srcs/sim_1/new/tb_sequence_detector.sv,,sequence_detector,,,,,,,,

@@ -1,0 +1,681 @@
+$date
+   Tue Dec  3 11:34:11 2024
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module tb_digital_lock $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$var reg 1 # unlock $end
+$var reg 1 $ open $end
+$var reg 1 % close $end
+$var reg 1 & fail $end
+$var reg 4 ' in_pass [3:0] $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) reset $end
+$var wire 4 * in_pass [3:0] $end
+$var wire 1 + open $end
+$var wire 1 , close $end
+$var reg 1 # unlock $end
+$var reg 1 & fail $end
+$var reg 2 - current_state [1:0] $end
+$var reg 2 . next_state [1:0] $end
+$var reg 4 / q [3:0] $end
+$var reg 4 0 password [3:0] $end
+$var reg 4 1 failed_attempts [3:0] $end
+$var reg 1 2 open_debounced $end
+$var reg 2 3 open_sync [1:0] $end
+$var reg 4 4 failed_attempts_next [3:0] $end
+$var reg 30 5 timer [29:0] $end
+$var wire 1 6 timer_done $end
+$var parameter 32 7 CLOCK_FREQ_HZ [31:0] $end
+$var parameter 32 8 TIMER_MAX [31:0] $end
+$scope module count_inst $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var wire 1 9 en $end
+$var wire 1 # load $end
+$var wire 1 : up_down $end
+$var wire 4 ; d [3:0] $end
+$var reg 4 1 q [3:0] $end
+$var reg 4 < next_q [3:0] $end
+$var parameter 32 = n [31:0] $end
+$scope module flipflop_gen_loop[0].FF $end
+$var wire 1 > d $end
+$var wire 1 ? en $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var reg 1 @ qm $end
+$var reg 1 A qs $end
+$upscope $end
+$scope module flipflop_gen_loop[1].FF $end
+$var wire 1 B d $end
+$var wire 1 C en $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var reg 1 D qm $end
+$var reg 1 E qs $end
+$upscope $end
+$scope module flipflop_gen_loop[2].FF $end
+$var wire 1 F d $end
+$var wire 1 G en $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var reg 1 H qm $end
+$var reg 1 I qs $end
+$upscope $end
+$scope module flipflop_gen_loop[3].FF $end
+$var wire 1 J d $end
+$var wire 1 K en $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var reg 1 L qm $end
+$var reg 1 M qs $end
+$upscope $end
+$upscope $end
+$scope module reg_password $end
+$var wire 1 ( clk $end
+$var wire 1 ) areset $end
+$var wire 1 N en $end
+$var wire 4 O d [3:0] $end
+$var reg 4 / q [3:0] $end
+$var parameter 32 P n [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+x#
+0$
+0%
+x&
+b0 '
+0(
+1)
+b0 *
+0+
+0,
+bx -
+b0 .
+bx /
+b1111 0
+bx 1
+x2
+bx 3
+bx 4
+bx 5
+x6
+b101111101011110000100000000 7
+b111011100110101100101000000000 8
+x9
+0:
+bx ;
+bx <
+b100 =
+x>
+x?
+0@
+xA
+xB
+xC
+0D
+xE
+xF
+xG
+0H
+xI
+xJ
+xK
+0L
+xM
+1N
+b1111 O
+b100 P
+$end
+#5000
+1!
+0#
+0&
+1(
+b0 -
+b1111 /
+02
+bx0 3
+bx 4
+b0 5
+06
+09
+bx <
+0?
+0C
+0G
+0K
+#10000
+0!
+0"
+0(
+0)
+b0 /
+b0 1
+02
+b0 3
+b1 4
+09
+b1 ;
+b0 <
+0>
+0A
+0B
+0E
+0F
+0I
+0J
+0M
+#15000
+1!
+1(
+#20000
+0!
+1"
+1$
+b1110 '
+0(
+1)
+b1110 *
+1+
+09
+#25000
+1!
+1(
+b1111 /
+12
+b1 3
+19
+b1 <
+1>
+1?
+1C
+1G
+1K
+#30000
+0!
+0$
+0(
+0+
+#35000
+1!
+1(
+b1 1
+02
+b10 3
+b10 4
+09
+b10 ;
+b1 <
+1>
+0?
+1A
+0B
+0C
+0E
+0G
+0I
+0K
+0M
+#40000
+0!
+1$
+b110 '
+0(
+b110 *
+1+
+09
+#45000
+1!
+1(
+12
+b1 3
+19
+b10 <
+0>
+1?
+1B
+1C
+1G
+1K
+#50000
+0!
+0$
+0(
+0+
+#55000
+1!
+1(
+b10 1
+02
+b10 3
+b11 4
+09
+b11 ;
+b10 <
+0>
+0?
+0A
+0C
+1E
+0G
+0I
+0K
+0M
+#60000
+0!
+1$
+b110 '
+0(
+1+
+#65000
+1!
+1(
+12
+b1 3
+19
+b11 <
+1>
+1?
+1C
+1G
+1K
+#70000
+0!
+0$
+0(
+0+
+#75000
+1!
+1(
+b10 .
+b11 1
+02
+b10 3
+b100 4
+09
+b100 ;
+b11 <
+1>
+0?
+1A
+1B
+0C
+1E
+0F
+0G
+0I
+0K
+0M
+#80000
+0!
+0(
+#85000
+1!
+0#
+1&
+1(
+b10 -
+02
+b0 3
+b0 4
+b0 ;
+b11 <
+#90000
+0!
+0(
+#95000
+1!
+1(
+b1 5
+06
+#100000
+0!
+0(
+#105000
+1!
+1(
+b10 5
+06
+#110000
+0!
+0(
+#115000
+1!
+1(
+b11 5
+06
+#120000
+0!
+0(
+#125000
+1!
+1(
+b100 5
+06
+#130000
+0!
+0(
+#135000
+1!
+1(
+b101 5
+06
+#140000
+0!
+0(
+#145000
+1!
+1(
+b110 5
+06
+#150000
+0!
+0(
+#155000
+1!
+1(
+b111 5
+06
+#160000
+0!
+0(
+#165000
+1!
+1(
+b1000 5
+06
+#170000
+0!
+0(
+#175000
+1!
+1$
+b1111 '
+1(
+b1111 *
+1+
+12
+b1 3
+b1001 5
+06
+09
+#180000
+0!
+0(
+#185000
+1!
+0$
+1%
+1(
+0+
+1,
+02
+b10 3
+b1010 5
+06
+09
+#190000
+0!
+0(
+#195000
+1!
+1$
+0%
+b1110 '
+1(
+b1110 *
+1+
+0,
+12
+b1 3
+b1011 5
+06
+19
+b100 <
+0>
+1?
+0B
+1C
+1F
+1G
+1K
+#200000
+0!
+0(
+#205000
+1!
+0$
+1(
+0+
+b100 1
+02
+b10 3
+b0 4
+b1100 5
+06
+09
+b100 <
+0>
+0?
+0A
+0C
+0E
+0G
+1I
+0K
+0M
+#210000
+0!
+0(
+#215000
+1!
+1$
+b1110 '
+1(
+1+
+12
+b1 3
+b1101 5
+06
+19
+b101 <
+1>
+1?
+1C
+1G
+1K
+#220000
+0!
+0(
+#225000
+1!
+0$
+1(
+0+
+b101 1
+02
+b10 3
+b0 4
+b1110 5
+06
+09
+b101 <
+1>
+0?
+1A
+0B
+0C
+0E
+0G
+1I
+0K
+0M
+#230000
+0!
+0(
+#235000
+1!
+1$
+b1110 '
+1(
+1+
+12
+b1 3
+b1111 5
+06
+19
+b110 <
+0>
+1?
+1B
+1C
+1G
+1K
+#240000
+0!
+0(
+#245000
+1!
+0$
+1(
+0+
+b110 1
+02
+b10 3
+b0 4
+b10000 5
+06
+09
+b110 <
+0>
+0?
+0A
+0C
+1E
+0G
+1I
+0K
+0M
+#250000
+0!
+0(
+#255000
+1!
+1(
+02
+b0 3
+b10001 5
+06
+#260000
+0!
+0(
+#265000
+1!
+1(
+b10010 5
+06
+#270000
+0!
+0(
+#275000
+1!
+1(
+b10011 5
+06
+#280000
+0!
+0(
+#285000
+1!
+1(
+b10100 5
+06
+#290000
+0!
+0(
+#295000
+1!
+1(
+b10101 5
+06
+#300000
+0!
+0(
+#305000
+1!
+1(
+b10110 5
+06
+#310000
+0!
+0(
+#315000
+1!
+1(
+b10111 5
+06
+#320000
+0!
+0(
+#325000
+1!
+1(
+b11000 5
+06
+#330000
+0!
+0(
+#335000
+1!
+1(
+b11001 5
+06
+#340000
+0!
+0(
+#345000
+1!
+1$
+b1111 '
+1(
+b1111 *
+1+
+12
+b1 3
+b11010 5
+06
+09
+#350000
+0!
+0(
+#355000
+1!
+0$
+1%
+1(
+0+
+1,
+02
+b10 3
+b11011 5
+06
+09
+#360000
+0!
+0(
+#365000
+0%
