@@ -41,7 +41,8 @@ always_comb begin
     else
         unlock_dig = 4'b1100;
 end
-//// Method 2:
+
+// Method 2:
 //assign unlock_dig = unlock ? 4'b0000 : 
 //       fail ? 4'b1111 :
 //       4'b1100;

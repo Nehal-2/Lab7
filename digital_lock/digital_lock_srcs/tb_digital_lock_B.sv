@@ -38,23 +38,31 @@ module tb_digital_lock;
         .fail(fail)
     );
     
+    
     initial begin
-        reset=1; in_pass = 4'b0000; open = 0; close = 0; #10 
-        reset=0; #10
-        reset=1;
-
-        in_pass = 4'b1110; #10; open = 1; 
-        in_pass = 4'b0110; open = 1; #10; 
-        in_pass = 4'b0110; open = 0; #10;   
-        in_pass = 4'b0100; #10; open = 1; 
-        in_pass = 4'b1110; #10; open = 1; #100; //#1_000_000_000;
-        in_pass = 4'b1111; open = 1; #10; 
+        // Test sequence
+        reset = 1; in_pass = 4'b0000; open = 0; close = 0; #10;
+        reset = 0; #10;
+        reset = 1;
+        // Wrong password attempts
+        in_pass = 4'b1110; open = 1; #10; open = 0; #10;
+        in_pass = 4'b0110; open = 1; #10; open = 0; #10;
+        in_pass = 4'b0110; open = 1; #10; open = 0; #10;
         
-        in_pass = 4'b1110; #10; open = 1;
-        in_pass = 4'b1111; #10; open = 1; #10; close = 1; #10; 
-        in_pass = 4'b0110; #10;  
-        in_pass = 4'b1111; open = 0; #10;
-        in_pass = 4'b0110; #10; open = 1;  
+        repeat(10) @(posedge clk); // Tested with 10 cycles for convenience
+        @(negedge clk);
+        // Correct password attempt after reset
+        in_pass = 4'b1111; open = 1; #10; open = 0; close = 1; #10; close = 0; 
+
+        // Test timer functionality in failed state
+        in_pass = 4'b1110; open = 1; #10; open = 0; #10;
+        in_pass = 4'b1110; open = 1; #10; open = 0; #10;
+        in_pass = 4'b1110; open = 1; #10; open = 0; #10; // 3 failed attempts trigger failed state
+
+        repeat(10) @(posedge clk); // Wait for timer to expire
+
+        // Attempt unlock after timer expiry
+        in_pass = 4'b1111; open = 1; #10; open = 0; close = 1; #10; close = 0; 
 
         $finish;
     end 

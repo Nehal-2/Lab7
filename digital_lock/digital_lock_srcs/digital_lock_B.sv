@@ -44,14 +44,32 @@ module digital_lock(
     
     assign password = 4'b1111;
     
+    logic open_debounced;
+    logic [1:0] open_sync;
+    
+    // Synchronize the 'open' button to the clock
+    always_ff @(posedge clk or negedge reset) begin
+        if (!reset)
+            open_sync <= 2'b00;
+        else 
+            open_sync <= {open_sync[0], open};
+    end
+    
+    assign open_debounced = (open_sync == 2'b01); // Detect 0 to 1 transition
+    
+    logic [3:0] failed_attempts_next;
+    assign failed_attempts_next =  4'b0000;
+    
     nbit_counter#(.n(4)) count_inst (
             .clk(clk),
             .areset(reset),
-            .en((in_pass != q) && open),
+            .en((in_pass != q) && open_debounced),
             .up_down(1'b0),
+            .d(failed_attempts_next),
+            .load(unlock | fail),
             .q(failed_attempts)
        );
-     
+       
      // State transition:
      always_ff @(posedge clk or negedge reset) begin
         if (!reset)
@@ -69,8 +87,8 @@ module digital_lock(
             .q(q)
       );
       
-      // 10-second timer (100 MHz clock, 10 seconds = 1_000_000_000 clock cycles)
-    localparam TIMER_MAX = 1_000_000_000; // Tested with TIMER_MAX = 10 for convenience
+    localparam CLOCK_FREQ_HZ = 100_000_000; // 100 MHz
+    localparam TIMER_MAX = 10 * CLOCK_FREQ_HZ; // 10 seconds
     reg [29:0] timer; // Enough to hold up to 1_000_000_000
     wire timer_done = (timer == TIMER_MAX);
 
@@ -79,16 +97,15 @@ module digital_lock(
             timer <= 0;
         else if (current_state == failed && !timer_done)
             timer <= timer + 1;
-        else if (current_state != failed)
+        else
             timer <= 0;
     end
-
       
        // Next-state logic:
       always_comb begin
         case (current_state)
             locked: begin
-                    if (failed_attempts == 3) 
+                    if (failed_attempts >= 3) 
                         next_state = failed; 
                     else if ((in_pass == q) && open) 
                         next_state = unlocked; 
@@ -97,10 +114,11 @@ module digital_lock(
             end
             unlocked: next_state = close ? locked : unlocked;
             failed: begin
-                if (timer_done)
+                if (timer_done) begin
                     next_state = locked;
-                else
+                end else begin
                     next_state = failed;
+                end
             end  
             default: next_state = locked;
          endcase
